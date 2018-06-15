@@ -2,18 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Ardalis.GuardClauses/1.2.3": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
-        }
-      },
       "Microsoft.AspNet.WebApi.Client/5.2.4": {
         "type": "package",
         "dependencies": {
@@ -2884,35 +2872,6 @@
           }
         }
       },
-      "StructureMap/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0",
-          "System.Collections.Concurrent": "4.0.12",
-          "System.Reflection.Emit.Lightweight": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.1.0",
-          "System.Runtime.Loader": "4.0.0"
-        },
-        "compile": {
-          "lib/netstandard1.5/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/StructureMap.dll": {}
-        }
-      },
-      "StructureMap.Microsoft.DependencyInjection/1.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "StructureMap": "4.5.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/StructureMap.Microsoft.DependencyInjection.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/StructureMap.Microsoft.DependencyInjection.dll": {}
-        }
-      },
       "Swashbuckle.AspNetCore/2.5.0": {
         "type": "package",
         "dependencies": {
@@ -3646,7 +3605,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
+          "ref/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -3791,20 +3750,6 @@
             "assetType": "runtime",
             "rid": "win"
           }
-        }
-      },
-      "System.Runtime.Loader/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.IO": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Runtime": "4.1.0"
-        },
-        "compile": {
-          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -4456,49 +4401,10 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "CASportStore.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "Ardalis.GuardClauses": "1.2.3"
-        },
-        "compile": {
-          "bin/placeholder/CASportStore.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CASportStore.Core.dll": {}
-        }
-      },
-      "CASportStore.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "CASportStore.Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "2.1.0",
-          "StructureMap.Microsoft.DependencyInjection": "1.4.0"
-        },
-        "compile": {
-          "bin/placeholder/CASportStore.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CASportStore.Infrastructure.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Ardalis.GuardClauses/1.2.3": {
-      "sha512": "vbseGD73Uo7zqeX0vYyEVDv3EWn4AMA3X+D8otpxn5GLPeXQjkVIw/ITUMAzco72EAHDogy2T4UQtq99Dt8Pug==",
-      "type": "package",
-      "path": "ardalis.guardclauses/1.2.3",
-      "files": [
-        "ardalis.guardclauses.1.2.3.nupkg.sha512",
-        "ardalis.guardclauses.nuspec",
-        "lib/net40/Ardalis.GuardClauses.dll",
-        "lib/netstandard1.1/Ardalis.GuardClauses.dll"
-      ]
-    },
     "Microsoft.AspNet.WebApi.Client/5.2.4": {
       "sha512": "OdBVC2bQWkf9qDd7Mt07ev4SwIdu6VmLBMTWC0D5cOP/HWSXyv/77otwtXVrAo42duNjvXOjzjP5oOI9m1+DTQ==",
       "type": "package",
@@ -7420,36 +7326,6 @@
         "version.txt"
       ]
     },
-    "StructureMap/4.5.0": {
-      "sha512": "P7Xsq8IcxUcrXdGusACcyaIIN/PAlo6XvnPOJHzth4tcNlXAd+tqckytKLJcFaLSnwc5rcTtBk95R71xvu6aaA==",
-      "type": "package",
-      "path": "structuremap/4.5.0",
-      "files": [
-        "lib/net45/StructureMap.dll",
-        "lib/net45/StructureMap.xml",
-        "lib/netstandard1.3/StructureMap.dll",
-        "lib/netstandard1.3/StructureMap.xml",
-        "lib/netstandard1.5/StructureMap.dll",
-        "lib/netstandard1.5/StructureMap.xml",
-        "structuremap.4.5.0.nupkg.sha512",
-        "structuremap.nuspec"
-      ]
-    },
-    "StructureMap.Microsoft.DependencyInjection/1.4.0": {
-      "sha512": "AF7VfvkZ0N0Fgm/HvUiRQEySPFuAi125MBehVQxCyHQkieIriG1r7OCs6LlmE3UXvRBbQecoOU4bWroaB5dS3g==",
-      "type": "package",
-      "path": "structuremap.microsoft.dependencyinjection/1.4.0",
-      "files": [
-        "lib/net451/StructureMap.Microsoft.DependencyInjection.dll",
-        "lib/net451/StructureMap.Microsoft.DependencyInjection.xml",
-        "lib/netstandard1.3/StructureMap.Microsoft.DependencyInjection.dll",
-        "lib/netstandard1.3/StructureMap.Microsoft.DependencyInjection.xml",
-        "lib/netstandard2.0/StructureMap.Microsoft.DependencyInjection.dll",
-        "lib/netstandard2.0/StructureMap.Microsoft.DependencyInjection.xml",
-        "structuremap.microsoft.dependencyinjection.1.4.0.nupkg.sha512",
-        "structuremap.microsoft.dependencyinjection.nuspec"
-      ]
-    },
     "Swashbuckle.AspNetCore/2.5.0": {
       "sha512": "MDGQGeHQbQrEfto4hQt4CuolBz6szWLxpDXaQMV4xHV2bBnrYDcu25fF2rdqvnGiQlUbhw4pSXHOesUx+3/iow==",
       "type": "package",
@@ -10200,30 +10076,6 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
-    "System.Runtime.Loader/4.0.0": {
-      "sha512": "4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
-      "type": "package",
-      "path": "system.runtime.loader/4.0.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/net462/_._",
-        "lib/netstandard1.5/System.Runtime.Loader.dll",
-        "ref/netstandard1.5/System.Runtime.Loader.dll",
-        "ref/netstandard1.5/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/de/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/es/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/fr/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/it/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ja/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ko/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ru/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/zh-hans/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
-        "system.runtime.loader.4.0.0.nupkg.sha512",
-        "system.runtime.loader.nuspec"
-      ]
-    },
     "System.Runtime.Numerics/4.3.0": {
       "sha512": "yMH+MfdzHjy17l2KESnPiF2dwq7T+xLnSJar7slyimAkUh/gTrS9/UQOtv7xarskJ2/XDSNvfLGOBQPjL7PaHQ==",
       "type": "package",
@@ -11821,22 +11673,10 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "CASportStore.Core/1.0.0": {
-      "type": "project",
-      "path": "../CASportStore.Core/CASportStore.Core.csproj",
-      "msbuildProject": "../CASportStore.Core/CASportStore.Core.csproj"
-    },
-    "CASportStore.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../CASportStore.Infrastructure/CASportStore.Infrastructure.csproj",
-      "msbuildProject": "../CASportStore.Infrastructure/CASportStore.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "CASportStore.Core >= 1.0.0",
-      "CASportStore.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.Net.Compilers >= 2.8.2",
@@ -11875,14 +11715,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
-            },
-            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

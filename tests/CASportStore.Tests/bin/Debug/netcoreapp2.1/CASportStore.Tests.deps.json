@@ -2637,8 +2637,6 @@
       },
       "CASportStore.Web/1.0.0": {
         "dependencies": {
-          "CASportStore.Core": "1.0.0",
-          "CASportStore.Infrastructure": "1.0.0",
           "Microsoft.Net.Compilers": "2.8.2",
           "Swashbuckle.AspNetCore": "2.5.0"
         },

@@ -3,7 +3,6 @@ using System.Linq;
 using CASportStore.Core.Interfaces;
 using CASportStore.Core.SharedKernel;
 using Microsoft.EntityFrameworkCore;
-using CASportStore.Infrastructure.Data;
 
 namespace CASportStore.Infrastructure.Data
 {

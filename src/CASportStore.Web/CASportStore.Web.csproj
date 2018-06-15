@@ -14,9 +14,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CASportStore.Core\CASportStore.Core.csproj" />
-    <ProjectReference Include="..\CASportStore.Infrastructure\CASportStore.Infrastructure.csproj" />
-  </ItemGroup>
-
 </Project>

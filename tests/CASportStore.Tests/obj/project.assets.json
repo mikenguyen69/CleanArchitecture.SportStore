@@ -3613,8 +3613,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "CASportStore.Core": "1.0.0",
-          "CASportStore.Infrastructure": "1.0.0",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.Net.Compilers": "2.8.2",
           "Swashbuckle.AspNetCore": "2.5.0"

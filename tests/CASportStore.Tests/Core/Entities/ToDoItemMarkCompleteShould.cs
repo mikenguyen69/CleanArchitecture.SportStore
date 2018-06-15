@@ -7,6 +7,7 @@ namespace CASportStore.Tests.Core.Entities
 {
     public class ToDoItemMarkCompleteShould
     {
+        // this is to test after completed then the item must be done
         [Fact]
         public void SetIsDoneToTrue()
         {
@@ -17,6 +18,7 @@ namespace CASportStore.Tests.Core.Entities
             Assert.True(item.IsDone);
         }
 
+        // this is to test the complete event via trigger the item to be completed
         [Fact]
         public void RaiseToDoItemCompletedEvent()
         {
