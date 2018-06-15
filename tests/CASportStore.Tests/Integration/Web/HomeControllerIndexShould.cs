@@ -5,7 +5,7 @@ namespace CASportStore.Tests.Integration.Web
 {
     public class HomeControllerIndexShould : BaseWebTest
     {
-        [Fact]
+        //[Fact]
         public async Task ReturnViewWithCorrectMessage()
         {
             var response = await _client.GetAsync("/");

@@ -30,7 +30,7 @@ namespace CASportStore.Tests.Integration.Web
             };
 
             // Act
-            ProductsListViewModel result = controller.List(2).ViewData.Model as ProductsListViewModel;
+            ProductsListViewModel result = controller.List(null, 2).ViewData.Model as ProductsListViewModel;
 
             // Assert
             Product[] array = result.Products.ToArray();
@@ -55,7 +55,7 @@ namespace CASportStore.Tests.Integration.Web
             ProductController controller = new ProductController(mock.Object) { PageSize = 3 };
 
             // Act 
-            ProductsListViewModel result = controller.List(2).ViewData.Model as ProductsListViewModel;
+            ProductsListViewModel result = controller.List(null, 2).ViewData.Model as ProductsListViewModel;
 
             // Assert
             PagingInfo pageInfo = result.PagingInfo;
@@ -63,6 +63,34 @@ namespace CASportStore.Tests.Integration.Web
             Assert.Equal(3, pageInfo.ItemsPerPage);
             Assert.Equal(5, pageInfo.TotalItems);
             Assert.Equal(2, pageInfo.TotalPages);
+        }
+
+        [Fact]
+        public void Can_Filter_Product()
+        {
+            // Arrange
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns((new Product[] {
+                new Product {Id = 1, Name = "P1", Category="Cat1"},
+                new Product {Id = 2, Name = "P2", Category="Cat1"},
+                new Product {Id = 3, Name = "P3", Category="Cat1"},
+                new Product {Id = 4, Name = "P4", Category="Cat2"},
+                new Product {Id = 5, Name = "P5", Category="Cat2"}
+            }).AsQueryable());
+
+            ProductController controller = new ProductController(mock.Object)
+            {
+                PageSize = 3
+            };
+
+            // Act
+            ProductsListViewModel result = controller.List("Cat2", 1).ViewData.Model as ProductsListViewModel;
+
+            // Assert
+            Product[] array = result.Products.ToArray();
+            Assert.True(array.Length == 2);
+            Assert.True("P4" == array[0].Name && array[0].Category == "Cat2");
+            Assert.True("P5" == array[1].Name && array[0].Category == "Cat2");
         }
     }
 }

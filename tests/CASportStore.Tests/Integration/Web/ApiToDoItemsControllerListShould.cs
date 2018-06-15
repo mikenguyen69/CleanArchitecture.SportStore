@@ -16,7 +16,7 @@ namespace CASportStore.Tests.Integration.Web
 
     public class ApiToDoItemsControllerList : BaseWebTest
     {
-        [Fact]
+        //[Fact]
         public async Task ReturnsTwoItems()
         {
             var response = await _client.GetAsync("/api/todoitems");

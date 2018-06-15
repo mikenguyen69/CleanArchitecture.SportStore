@@ -8,45 +8,24 @@
     <link rel="stylesheet"
           asp-href-include="/lib/bootstrap/dist/**/*.min.css"
           asp-href-exclude="**/*-reboot*,**/*-grid*" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
 </head>
 <body>
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
         <a class="navbar-brand" href="#">SPORTS STORE</a>
     </div>              
     
-    <div class="container">
-        <div class="row m-1 p-1">
-            <div id="categories" class="col-3">
-                Put something useful here later
-            </div>
-            <div class="col-9">
-                @RenderBody()
-            </div>
+    <div class="row m-1 p-1">
+        <div id="categories" class="col-3">
+            @await Component.InvokeAsync("NavigationMenu")
         </div>
-        <hr />
-        <footer>
-            <p>&copy; 2018 - CASportStore.Web</p>
-        </footer>
+        <div class="col-9">
+            @RenderBody()
+        </div>
     </div>
-
-    @*<environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
-    @RenderSection("scripts", required: false)*@
+    <hr />
+    <footer>
+        <p>&copy; 2018 - CASportStore.Web</p>
+    </footer>
 </body>
 </html>

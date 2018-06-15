@@ -17,12 +17,13 @@ namespace CASportStore.Web.Controllers
         }
 
         // Call without view name means tell MVC to render default view for action method
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category, int page = 1)
          => View(new ProductsListViewModel
          {
              Products = _repository.Products
+             .Where(x => category == null || x.Category == category)
              .OrderBy(p => p.Id)
-             .Skip((page - 1)*PageSize)
+             .Skip((page - 1) * PageSize)
              .Take(PageSize), 
 
              PagingInfo = new PagingInfo
@@ -30,9 +31,9 @@ namespace CASportStore.Web.Controllers
                  CurrentPage = page, 
                  ItemsPerPage = PageSize,
                  TotalItems = _repository.Products.Count()
-             }
-         });
-             
-             
+             }, 
+
+             CurrentCategory = category
+         });  
     }
 }
