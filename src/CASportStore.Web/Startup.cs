@@ -129,6 +129,10 @@ namespace CASportStore.Web
             services.AddTransient<IProductRepository, EfProductRepository>();
             // setup the shared objects used in MVC applications
             services.AddMvc();
+            // setup in memory data store
+            services.AddMemoryCache();
+            // register services to access session data
+            services.AddSession();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -139,6 +143,8 @@ namespace CASportStore.Web
             app.UseStatusCodePages();
             // Enable support for serving static content from wwwroot folder
             app.UseStaticFiles();
+            // Use session
+            app.UseSession();
             // Enable ASP.NET Core MVC
             app.UseMvc(routes =>
             {
