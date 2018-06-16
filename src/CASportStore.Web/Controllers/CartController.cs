@@ -1,8 +1,6 @@
 ﻿using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System;
-using CASportStore.Web.Infrastructure;
 using CASportStore.Web.Models.ViewModels;
 
 namespace CASportStore.Web.Controllers
@@ -10,17 +8,19 @@ namespace CASportStore.Web.Controllers
     public class CartController : Controller
     {
         private IProductRepository _repository;
+        private Cart _cart;
 
-        public CartController(IProductRepository repository)
+        public CartController(IProductRepository repository, Cart cartService)
         {
             _repository = repository;
+            _cart = cartService;
         }
 
         public ViewResult Index(string returnUrl)
         {
             return View(new CartIndexViewModel
             {
-                Cart = GetCart(),
+                Cart = _cart,
                 ReturnUrl = returnUrl
             });
         }
@@ -31,9 +31,7 @@ namespace CASportStore.Web.Controllers
 
             if (p != null)
             {
-                Cart cart = GetCart();
-                cart.AddItem(p, 1);
-                SaveCart(cart);
+                _cart.AddItem(p, 1);              
             }
 
             return RedirectToAction("Index", new { returnUrl });
@@ -45,23 +43,12 @@ namespace CASportStore.Web.Controllers
                 .FirstOrDefault(p => p.Id == productId);
 
             if (product != null)
-            {
-                Cart cart = GetCart();
-                cart.RemoveLine(product);
-                SaveCart(cart);
+            {                
+                _cart.RemoveLine(product);
             }
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        private void SaveCart(Cart cart)
-        {
-            HttpContext.Session.SetJson("Cart", cart);
-        }
-
-        private Cart GetCart()
-        {
-            Cart cart = HttpContext.Session.GetJson<Cart>("Cart") ?? new Cart();
-            return cart;
-        }
+        
     }
 }

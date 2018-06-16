@@ -125,6 +125,10 @@ namespace CASportStore.Web
                     // Access to configuration data via Configuration's key 
                     Configuration["Data:SportStoreProducts:ConnectionString"]) 
             );
+            // Specify the same object should be used to satisfy related requests for Cart instances
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            // Specify the same object should always be used
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             // Create new object each time the interface is needed
             services.AddTransient<IProductRepository, EfProductRepository>();
             // setup the shared objects used in MVC applications
