@@ -8,5 +8,7 @@ namespace CASportStore.Web.Models
     public interface IProductRepository
     {
         IQueryable<Product> Products { get; }
+        void Save(Product product);
+        Product Delete(int productId);
     }
 }

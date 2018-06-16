@@ -1,6 +1,7 @@
 ﻿using CASportStore.Web.Controllers;
 using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -86,6 +87,77 @@ namespace CASportStore.Tests.Integration.Web
 
             // Assert
             Assert.Null(result);
+        }
+
+        [Fact]
+        public void Can_Save_Valid_Changes()
+        {
+            // Arrange - create mock repository
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            // Arrange - create mock temp data
+            Mock<ITempDataDictionary> tempData = new Mock<ITempDataDictionary>();
+            // Arrange - create the controller
+            AdminController target = new AdminController(mock.Object)
+            {
+                TempData = tempData.Object
+            };
+            // Arrange - create a product
+            Product product = new Product { Name = "Test" };
+
+            // Act - try to save the product
+            IActionResult result = target.Edit(product);
+
+            // Assert - check that the repository was called
+            mock.Verify(m => m.Save(product));
+            // Assert - check the result type is a redirection
+            Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Index", (result as RedirectToActionResult).ActionName);
+        }
+
+        [Fact]
+        public void Cannot_Save_Invalid_Changes()
+        {
+            // Arrange - create mock repository
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            // Arrange - create the controller
+            AdminController target = new AdminController(mock.Object);
+            // Arrange - create a product
+            Product product = new Product { Name = "Test" };
+            // Arrange - add an error to the model state
+            target.ModelState.AddModelError("error", "error");
+
+            // Act - try to save the product
+            IActionResult result = target.Edit(product);
+
+            // Assert - check that the repository was not called
+            mock.Verify(m => m.Save(It.IsAny<Product>()), Times.Never());
+            // Assert - check the method result type
+            Assert.IsType<ViewResult>(result);
+        }
+
+        [Fact]
+        public void Can_Delete_Valid_Products()
+        {
+            // Arrange - create a Product
+            Product prod = new Product { Id = 2, Name = "Test" };
+
+            // Arrange - create the mock repository
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+                    mock.Setup(m => m.Products).Returns(new Product[] {
+                new Product {Id = 1, Name = "P1"},
+                prod,
+                new Product {Id = 3, Name = "P3"},
+            }.AsQueryable());
+
+            // Arrange - create the controller
+            AdminController target = new AdminController(mock.Object);
+
+            // Act - delete the product
+            target.Delete(prod.Id);
+
+            // Assert - ensure that the repository delete method was
+            // called with the correct Product
+            mock.Verify(m => m.Delete(prod.Id));
         }
     }
 }
