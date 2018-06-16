@@ -39,3 +39,4 @@ C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcorea
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojResolveAssemblyReference.cache
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\List.g.cshtml.cs
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
