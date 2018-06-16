@@ -14,7 +14,7 @@ namespace CASportStore.Tests.Integration.Web
         [Fact]
         public void Cannot_Checkout_Empty_Cart()
         {
-            // Arrange - Create Mock repository 
+            // Arrange 
             Mock<IOrderRepository> mock = new Mock<IOrderRepository>();
 
             Cart cart = new Cart();
