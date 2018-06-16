@@ -98,7 +98,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("    ");
             EndContext();
             BeginContext(279, 229, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94ccce57684a45118b6487f53057db4a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8442b501b3204008a80d4345d2b9e576", async() => {
                 BeginContext(453, 51, true);
                 WriteLiteral("\r\n        <i class=\"fa fa-shopping-cart\"></i>\r\n    ");
                 EndContext();

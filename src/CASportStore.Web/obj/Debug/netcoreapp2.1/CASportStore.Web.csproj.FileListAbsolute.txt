@@ -31,7 +31,9 @@ C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\bin\Debug\netcorea
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.Views.pdb
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csproj.CopyComplete
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Product\ProductSummary.g.cshtml.cs
-C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojResolveAssemblyReference.cache
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\NavigationMenu\Default.g.cshtml.cs
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CartSummary\Default.g.cshtml.cs
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Checkout.g.cshtml.cs
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojResolveAssemblyReference.cache
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Completed.g.cshtml.cs

@@ -130,6 +130,7 @@ namespace CASportStore.Web
             // Specify the same object should always be used
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             // Create new object each time the interface is needed
+            services.AddTransient<IOrderRepository, EfOrderRepository>();
             services.AddTransient<IProductRepository, EfProductRepository>();
             // setup the shared objects used in MVC applications
             services.AddMvc();
