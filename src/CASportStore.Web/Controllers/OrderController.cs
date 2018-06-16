@@ -44,5 +44,22 @@ namespace CASportStore.Web.Controllers
             _cart.Clear();
             return View();
         }
+
+        public ViewResult List() =>
+            View(_repository.Orders.Where(o => !o.Shipped));
+
+        [HttpPost]
+        public IActionResult MarkShipped(int orderId)
+        {
+            Order order = _repository.Orders.FirstOrDefault(x => x.Id == orderId);
+
+            if (order != null)
+            {
+                order.Shipped = true;
+                _repository.Save(order);
+            }
+
+            return RedirectToAction(nameof(List));
+        }
     }
 }

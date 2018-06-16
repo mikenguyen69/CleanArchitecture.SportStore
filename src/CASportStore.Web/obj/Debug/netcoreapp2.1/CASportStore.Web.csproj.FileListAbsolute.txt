@@ -35,5 +35,7 @@ C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcorea
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CartSummary\Default.g.cshtml.cs
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Checkout.g.cshtml.cs
-C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojResolveAssemblyReference.cache
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Completed.g.cshtml.cs
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojResolveAssemblyReference.cache
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\List.g.cshtml.cs
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -125,6 +126,16 @@ namespace CASportStore.Web
                     // Access to configuration data via Configuration's key 
                     Configuration["Data:SportStoreProducts:ConnectionString"]) 
             );
+
+            services.AddDbContext<AppIdentityDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration["Data:SportStoreIdentity:ConnectionString"]
+                    )
+            );
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppIdentityDbContext>()
+                .AddDefaultTokenProviders();
+
             // Specify the same object should be used to satisfy related requests for Cart instances
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             // Specify the same object should always be used
@@ -150,6 +161,8 @@ namespace CASportStore.Web
             app.UseStaticFiles();
             // Use session
             app.UseSession();
+            // Setup component that intercept request and response to implement the security policy
+            app.UseAuthentication();
             // Enable ASP.NET Core MVC
             app.UseMvc(routes =>
             {
@@ -180,6 +193,7 @@ namespace CASportStore.Web
 
             });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
