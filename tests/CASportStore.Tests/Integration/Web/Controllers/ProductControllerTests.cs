@@ -8,8 +8,10 @@ using CASportStore.Web.Controllers;
 using CASportStore.Web.Models.ViewModels;
 using System;
 using Microsoft.AspNetCore.Mvc;
+using CASportStore.Core.Interfaces;
+using CASportStore.Core.Entities;
 
-namespace CASportStore.Tests.Integration.Web
+namespace CASportStore.Tests.Integration.Web.Controllers
 {
     public class ProductControllerTests
     {
@@ -17,14 +19,14 @@ namespace CASportStore.Tests.Integration.Web
         public void CanPaginate()
         {
             // Arrange
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns((new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns((new Product[] {
                 new Product {Id = 1, Name = "P1"},
                 new Product {Id = 2, Name = "P2"},
                 new Product {Id = 3, Name = "P3"},
                 new Product {Id = 4, Name = "P4"},
                 new Product {Id = 5, Name = "P5"}
-            }).AsQueryable());
+            }).ToList());
 
             ProductController controller = new ProductController(mock.Object)
             {
@@ -45,14 +47,14 @@ namespace CASportStore.Tests.Integration.Web
         public void Can_Send_Pagination_View_Model()
         {
             // Arrange 
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns((new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns((new Product[] {
                 new Product {Id = 1, Name = "P1"},
                 new Product {Id = 2, Name = "P2"},
                 new Product {Id = 3, Name = "P3"},
                 new Product {Id = 4, Name = "P4"},
                 new Product {Id = 5, Name = "P5"}
-            }).AsQueryable());
+            }).ToList());
 
             ProductController controller = new ProductController(mock.Object) { PageSize = 3 };
 
@@ -71,14 +73,14 @@ namespace CASportStore.Tests.Integration.Web
         public void Can_Filter_Product()
         {
             // Arrange
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns((new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns((new Product[] {
                 new Product {Id = 1, Name = "P1", Category="Cat1"},
                 new Product {Id = 2, Name = "P2", Category="Cat1"},
                 new Product {Id = 3, Name = "P3", Category="Cat1"},
                 new Product {Id = 4, Name = "P4", Category="Cat2"},
                 new Product {Id = 5, Name = "P5", Category="Cat2"}
-            }).AsQueryable());
+            }).ToList());
 
             ProductController controller = new ProductController(mock.Object)
             {
@@ -99,14 +101,14 @@ namespace CASportStore.Tests.Integration.Web
         public void Generate_Category_Specific_Product_Count()
         {
             // Arrange
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns((new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns((new Product[] {
                 new Product {Id = 1, Name = "P1", Category = "Cat1"},
                 new Product {Id = 2, Name = "P2", Category = "Cat2"},
                 new Product {Id = 3, Name = "P3", Category = "Cat1"},
                 new Product {Id = 4, Name = "P4", Category = "Cat2"},
                 new Product {Id = 5, Name = "P5", Category = "Cat3"}
-            }).AsQueryable());
+            }).ToList());
 
             ProductController target = new ProductController(mock.Object)
             {

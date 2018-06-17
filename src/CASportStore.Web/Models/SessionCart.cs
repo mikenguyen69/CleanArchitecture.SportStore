@@ -1,4 +1,6 @@
-﻿using CASportStore.Web.Infrastructure;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Services;
+using CASportStore.Web.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -12,9 +14,9 @@ namespace CASportStore.Web.Models
     /// <summary>
     /// Provide the Cart the ISession so that it can store themselves. 
     /// </summary>
-    public class SessionCart : Cart
+    public class SessionCart : CartService
     {
-        public static Cart GetCart(IServiceProvider services)
+        public static CartService GetCart(IServiceProvider services)
         {
             // IHttpContextAccessor service provides access to HttpContext object --> provide the ISession
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;

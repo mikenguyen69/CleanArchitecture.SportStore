@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CASportStore.Tests.Integration.Web
+namespace CASportStore.Tests.Integration.Web.TagHelpers
 {
     public class PageLinkTagHelperTests
     {

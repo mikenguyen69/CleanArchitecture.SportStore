@@ -1,4 +1,6 @@
-﻿using CASportStore.Web.Components;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Interfaces;
+using CASportStore.Web.Components;
 using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
@@ -8,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace CASportStore.Tests.Integration.Web
+namespace CASportStore.Tests.Integration.Web.Components
 {
     public class NavigationMenuViewComponentTests
     {
@@ -16,13 +18,13 @@ namespace CASportStore.Tests.Integration.Web
         public void Can_Select_Categories()
         {
             // Arrange
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns((new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns((new Product[] {
                 new Product {Id = 1, Name = "P1", Category = "Apples"},
                 new Product {Id = 2, Name = "P2", Category = "Apples"},
                 new Product {Id = 3, Name = "P3", Category = "Plums"},
                 new Product {Id = 4, Name = "P4", Category = "Oranges"},
-            }).AsQueryable<Product>());
+            }).ToList());
 
             NavigationMenuViewComponent target =
                 new NavigationMenuViewComponent(mock.Object);
@@ -41,11 +43,11 @@ namespace CASportStore.Tests.Integration.Web
         {
             // Arrange
             string categoryToSelect = "Apples";
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns((new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns((new Product[] {
                 new Product {Id = 1, Name = "P1", Category = "Apples"},
                 new Product {Id = 4, Name = "P2", Category = "Oranges"},
-            }).AsQueryable());
+            }).ToList());
 
             NavigationMenuViewComponent target = new NavigationMenuViewComponent(mock.Object)
             {

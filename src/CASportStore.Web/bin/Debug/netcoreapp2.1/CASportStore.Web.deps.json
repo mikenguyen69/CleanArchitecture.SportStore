@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "4dcca521091cbd677aa30169300a9f6aeef86606"
+    "signature": "52e0b723189375573f099a111f4ed4aa3a32900e"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v2.1": {
       "CASportStore.Web/1.0.0": {
         "dependencies": {
+          "CASportStore.Core": "1.0.0",
+          "CASportStore.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.0",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.Net.Compilers": "2.8.2",
@@ -34,6 +36,20 @@
         },
         "compile": {
           "CASportStore.Web.dll": {}
+        }
+      },
+      "Ardalis.GuardClauses/1.2.3": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
         }
       },
       "Microsoft.Net.Compilers/2.8.2": {},
@@ -208,6 +224,39 @@
           "Microsoft.NETCore.Platforms": "2.1.0"
         }
       },
+      "StructureMap/4.5.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Loader": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/StructureMap.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.5/StructureMap.dll": {}
+        }
+      },
+      "StructureMap.Microsoft.DependencyInjection/1.4.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0",
+          "StructureMap": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StructureMap.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/StructureMap.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/2.5.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
@@ -276,6 +325,40 @@
         },
         "compile": {
           "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        }
+      },
+      "System.Runtime.Loader/4.0.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "CASportStore.Core/1.0.0": {
+        "dependencies": {
+          "Ardalis.GuardClauses": "1.2.3",
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.0"
+        },
+        "runtime": {
+          "CASportStore.Core.dll": {}
+        },
+        "compile": {
+          "CASportStore.Core.dll": {}
+        }
+      },
+      "CASportStore.Infrastructure/1.0.0": {
+        "dependencies": {
+          "CASportStore.Core": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.1.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Tools": "2.1.0",
+          "StructureMap.Microsoft.DependencyInjection": "1.4.0"
+        },
+        "runtime": {
+          "CASportStore.Infrastructure.dll": {}
+        },
+        "compile": {
+          "CASportStore.Infrastructure.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.4": {
@@ -3229,6 +3312,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Ardalis.GuardClauses/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vbseGD73Uo7zqeX0vYyEVDv3EWn4AMA3X+D8otpxn5GLPeXQjkVIw/ITUMAzco72EAHDogy2T4UQtq99Dt8Pug==",
+      "path": "ardalis.guardclauses/1.2.3",
+      "hashPath": "ardalis.guardclauses.1.2.3.nupkg.sha512"
+    },
     "Microsoft.Net.Compilers/2.8.2": {
       "type": "package",
       "serviceable": true,
@@ -3285,6 +3375,20 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
+    "StructureMap/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P7Xsq8IcxUcrXdGusACcyaIIN/PAlo6XvnPOJHzth4tcNlXAd+tqckytKLJcFaLSnwc5rcTtBk95R71xvu6aaA==",
+      "path": "structuremap/4.5.0",
+      "hashPath": "structuremap.4.5.0.nupkg.sha512"
+    },
+    "StructureMap.Microsoft.DependencyInjection/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AF7VfvkZ0N0Fgm/HvUiRQEySPFuAi125MBehVQxCyHQkieIriG1r7OCs6LlmE3UXvRBbQecoOU4bWroaB5dS3g==",
+      "path": "structuremap.microsoft.dependencyinjection/1.4.0",
+      "hashPath": "structuremap.microsoft.dependencyinjection.1.4.0.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/2.5.0": {
       "type": "package",
       "serviceable": true,
@@ -3312,6 +3416,23 @@
       "sha512": "sha512-Vl/b/evziaRvdgA2VYf58PLdQnZyEhtSE1cBikwgORXexnAjeSHGb9ksgQLd8ZvTUD7hTYjnbXQHuKCYe2S3zA==",
       "path": "swashbuckle.aspnetcore.swaggerui/2.5.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.2.5.0.nupkg.sha512"
+    },
+    "System.Runtime.Loader/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
+      "path": "system.runtime.loader/4.0.0",
+      "hashPath": "system.runtime.loader.4.0.0.nupkg.sha512"
+    },
+    "CASportStore.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CASportStore.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.4": {
       "type": "package",

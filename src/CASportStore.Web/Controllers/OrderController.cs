@@ -1,4 +1,7 @@
-﻿using CASportStore.Web.Models;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Interfaces;
+using CASportStore.Core.Services;
+using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,13 +13,13 @@ namespace CASportStore.Web.Controllers
 {
     public class OrderController :  Controller
     {
-        private IOrderRepository _repository;
-        private Cart _cart;
+        private IRepository<Order> _repository;
+        private CartService _cartService;
 
-        public OrderController(IOrderRepository repository, Cart cartService)
+        public OrderController(IRepository<Order> repository, CartService cartService)
         {
             _repository = repository;
-            _cart = cartService;
+            _cartService = cartService;
         }
 
         public ViewResult Checkout() => View(new Order());
@@ -24,14 +27,14 @@ namespace CASportStore.Web.Controllers
         [HttpPost]
         public IActionResult Checkout(Order order)
         {
-            if (_cart.Lines.Count() == 0)
+            if (_cartService.Lines.Count() == 0)
             {
                 ModelState.AddModelError("", "Sorry, your cart is empty!");
             }
             if (ModelState.IsValid)
             {
-                order.Lines = _cart.Lines.ToArray();
-                _repository.Save(order);
+                order.Lines = _cartService.Lines.ToArray();
+                _repository.Update(order);
                 return RedirectToAction(nameof(Completed));
             }
             else
@@ -42,24 +45,24 @@ namespace CASportStore.Web.Controllers
 
         public ViewResult Completed()
         {
-            _cart.Clear();
+            _cartService.Clear();
             return View();
         }
 
         [Authorize]
         public ViewResult List() =>
-            View(_repository.Orders.Where(o => !o.Shipped));
+            View(_repository.List().Where(o => !o.Shipped));
 
         [Authorize]
         [HttpPost]
         public IActionResult MarkShipped(int orderId)
         {
-            Order order = _repository.Orders.FirstOrDefault(x => x.Id == orderId);
+            Order order = _repository.List().FirstOrDefault(x => x.Id == orderId);
 
             if (order != null)
             {
                 order.Shipped = true;
-                _repository.Save(order);
+                _repository.Update(order);
             }
 
             return RedirectToAction(nameof(List));

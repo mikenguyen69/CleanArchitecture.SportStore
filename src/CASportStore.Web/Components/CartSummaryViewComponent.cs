@@ -1,20 +1,21 @@
-﻿using CASportStore.Web.Models;
+﻿using CASportStore.Core.Services;
+using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CASportStore.Web.Components
 {
     public class CartSummaryViewComponent : ViewComponent
     {
-        private Cart cart;
+        private CartService _cartService;
 
-        public CartSummaryViewComponent(Cart cartService)
+        public CartSummaryViewComponent(CartService cartService)
         {
-            cart = cartService;
+            _cartService = cartService;
         }
 
         public IViewComponentResult Invoke()
         {
-            return View(cart);
+            return View(_cartService);
         }
     }
 }

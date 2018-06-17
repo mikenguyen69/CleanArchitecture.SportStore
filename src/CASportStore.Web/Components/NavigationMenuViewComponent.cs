@@ -1,17 +1,16 @@
-﻿using CASportStore.Web.Models;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CASportStore.Web.Components
 {
     public class NavigationMenuViewComponent : ViewComponent
     {
-        private IProductRepository _repository;
+        private IRepository<Product> _repository;
 
-        public NavigationMenuViewComponent(IProductRepository repository)
+        public NavigationMenuViewComponent(IRepository<Product> repository)
         {
             _repository = repository;
         }
@@ -19,7 +18,7 @@ namespace CASportStore.Web.Components
         public IViewComponentResult Invoke()
         {
             ViewBag.SelectedCategory = RouteData?.Values["category"];
-            return View(_repository.Products
+            return View(_repository.List()
                 .Select( x => x.Category)
                 .Distinct()
                 .OrderBy(x => x)

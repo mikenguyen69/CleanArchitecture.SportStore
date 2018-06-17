@@ -1,4 +1,6 @@
-﻿using CASportStore.Web.Controllers;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Interfaces;
+using CASportStore.Web.Controllers;
 using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
@@ -9,7 +11,7 @@ using System.Linq;
 using System.Text;
 using Xunit;
 
-namespace CASportStore.Tests.Integration.Web
+namespace CASportStore.Tests.Integration.Web.Controllers
 {
     public class AdminControllerTests
     {
@@ -17,12 +19,12 @@ namespace CASportStore.Tests.Integration.Web
         public void Index_Contains_All_Products()
         {
             // Arrange - create the mock repository
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns(new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns(new Product[] {
                 new Product {Id = 1, Name = "P1"},
                 new Product {Id = 2, Name = "P2"},
                 new Product {Id = 3, Name = "P3"},
-            }.AsQueryable());
+            }.ToList());
 
             // Arrange - create a controller
             AdminController target = new AdminController(mock.Object);
@@ -47,12 +49,12 @@ namespace CASportStore.Tests.Integration.Web
         public void Can_Edit_Product()
         {
             // Arrange - create the mock repository
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns(new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns(new Product[] {
                 new Product {Id = 1, Name = "P1"},
                 new Product {Id = 2, Name = "P2"},
                 new Product {Id = 3, Name = "P3"},
-            }.AsQueryable());
+            }.ToList());
 
             // Arrange - create the controller
             AdminController target = new AdminController(mock.Object);
@@ -72,12 +74,12 @@ namespace CASportStore.Tests.Integration.Web
         public void Cannot_Edit_Nonexistent_Product()
         {
             // Arrange - create the mock repository
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns(new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+            mock.Setup(m => m.List()).Returns(new Product[] {
                 new Product {Id = 1, Name = "P1"},
                 new Product {Id = 2, Name = "P2"},
                 new Product {Id = 3, Name = "P3"},
-            }.AsQueryable());
+            }.ToList());
 
             // Arrange - create the controller
             AdminController target = new AdminController(mock.Object);
@@ -93,7 +95,7 @@ namespace CASportStore.Tests.Integration.Web
         public void Can_Save_Valid_Changes()
         {
             // Arrange - create mock repository
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
             // Arrange - create mock temp data
             Mock<ITempDataDictionary> tempData = new Mock<ITempDataDictionary>();
             // Arrange - create the controller
@@ -108,7 +110,7 @@ namespace CASportStore.Tests.Integration.Web
             IActionResult result = target.Edit(product);
 
             // Assert - check that the repository was called
-            mock.Verify(m => m.Save(product));
+            mock.Verify(m => m.Update(product));
             // Assert - check the result type is a redirection
             Assert.IsType<RedirectToActionResult>(result);
             Assert.Equal("Index", (result as RedirectToActionResult).ActionName);
@@ -118,7 +120,7 @@ namespace CASportStore.Tests.Integration.Web
         public void Cannot_Save_Invalid_Changes()
         {
             // Arrange - create mock repository
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
             // Arrange - create the controller
             AdminController target = new AdminController(mock.Object);
             // Arrange - create a product
@@ -130,7 +132,7 @@ namespace CASportStore.Tests.Integration.Web
             IActionResult result = target.Edit(product);
 
             // Assert - check that the repository was not called
-            mock.Verify(m => m.Save(It.IsAny<Product>()), Times.Never());
+            mock.Verify(m => m.Update(It.IsAny<Product>()), Times.Never());
             // Assert - check the method result type
             Assert.IsType<ViewResult>(result);
         }
@@ -142,12 +144,12 @@ namespace CASportStore.Tests.Integration.Web
             Product prod = new Product { Id = 2, Name = "Test" };
 
             // Arrange - create the mock repository
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-                    mock.Setup(m => m.Products).Returns(new Product[] {
+            Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
+                    mock.Setup(m => m.List()).Returns(new Product[] {
                 new Product {Id = 1, Name = "P1"},
                 prod,
                 new Product {Id = 3, Name = "P3"},
-            }.AsQueryable());
+            }.ToList());
 
             // Arrange - create the controller
             AdminController target = new AdminController(mock.Object);
@@ -157,7 +159,7 @@ namespace CASportStore.Tests.Integration.Web
 
             // Assert - ensure that the repository delete method was
             // called with the correct Product
-            mock.Verify(m => m.Delete(prod.Id));
+            mock.Verify(m => m.Delete(prod));
         }
     }
 }

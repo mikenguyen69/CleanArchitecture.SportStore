@@ -1,4 +1,6 @@
-﻿using CASportStore.Web.Models;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Services;
+using CASportStore.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +18,7 @@ namespace CASportStore.Tests.Core.Entities
             Product p1 = new Product { Id = 1, Name = "P1" };
             Product p2 = new Product { Id = 2, Name = "P2" };
 
-            Cart target = new Cart();
+            CartService target = new CartService();
 
             // Act
             target.AddItem(p1, 1);
@@ -37,7 +39,7 @@ namespace CASportStore.Tests.Core.Entities
             Product p1 = new Product { Id = 1, Name = "P1" };
             Product p2 = new Product { Id = 2, Name = "P2" };
 
-            Cart target = new Cart();
+            CartService target = new CartService();
 
             // Act
             target.AddItem(p1, 1);
@@ -60,7 +62,7 @@ namespace CASportStore.Tests.Core.Entities
             Product p2 = new Product { Id = 2, Name = "P2" };
             Product p3 = new Product { Id = 3, Name = "P3" };
 
-            Cart target = new Cart();
+            CartService target = new CartService();
 
             // Act
             target.AddItem(p1, 1);
@@ -82,7 +84,7 @@ namespace CASportStore.Tests.Core.Entities
             Product p1 = new Product { Id = 1, Name = "P1", Price = 100M };
             Product p2 = new Product { Id = 2, Name = "P2", Price = 50M };
 
-            Cart target = new Cart();
+            CartService target = new CartService();
 
             // Act
             target.AddItem(p1, 1);
@@ -102,7 +104,7 @@ namespace CASportStore.Tests.Core.Entities
             Product p1 = new Product { Id = 1, Name = "P1", Price = 100M };
             Product p2 = new Product { Id = 2, Name = "P2", Price = 50M };
 
-            Cart target = new Cart();
+            CartService target = new CartService();
 
             // Act
             target.AddItem(p1, 1);

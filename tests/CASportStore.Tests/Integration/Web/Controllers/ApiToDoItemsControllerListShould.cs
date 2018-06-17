@@ -11,7 +11,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CASportStore.Tests.Integration.Web
+namespace CASportStore.Tests.Integration.Web.Controllers
 {
 
     public class ApiToDoItemsControllerList : BaseWebTest

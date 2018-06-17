@@ -1,4 +1,6 @@
-﻿using CASportStore.Web.Models;
+﻿using CASportStore.Core.Entities;
+using CASportStore.Core.Interfaces;
+using CASportStore.Web.Models;
 using CASportStore.Web.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -7,11 +9,11 @@ namespace CASportStore.Web.Controllers
 {
     public class ProductController : Controller
     {
-        private IProductRepository _repository;
+        private IRepository<Product> _repository;
         public int PageSize = 4;
 
         // Auto resolve via dependency injection
-        public ProductController(IProductRepository repository)
+        public ProductController(IRepository<Product> repository)
         {
             _repository = repository;
         }
@@ -20,7 +22,7 @@ namespace CASportStore.Web.Controllers
         public ViewResult List(string category, int page = 1)
          => View(new ProductsListViewModel
          {
-             Products = _repository.Products
+             Products = _repository.List()
              .Where(x => category == null || x.Category == category)
              .OrderBy(p => p.Id)
              .Skip((page - 1) * PageSize)
@@ -30,7 +32,7 @@ namespace CASportStore.Web.Controllers
              {
                  CurrentPage = page, 
                  ItemsPerPage = PageSize,
-                 TotalItems = category == null ? _repository.Products.Count() : _repository.Products.Count(x => x.Category == category)
+                 TotalItems = category == null ? _repository.List().Count() : _repository.List().Count(x => x.Category == category)
              }, 
 
              CurrentCategory = category

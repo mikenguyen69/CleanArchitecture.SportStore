@@ -8,9 +8,9 @@ namespace CASportStore.Infrastructure.Data
 {
     public class EfRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private readonly AppDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
 
-        public EfRepository(AppDbContext dbContext)
+        public EfRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }
