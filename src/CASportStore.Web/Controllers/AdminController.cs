@@ -1,9 +1,11 @@
 ﻿using CASportStore.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace CASportStore.Web.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductRepository _repository;
@@ -45,6 +47,14 @@ namespace CASportStore.Web.Controllers
             {
                 TempData["message"] = $"{deletedProduct.Name} was deleted.";
             }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public IActionResult SeedDatabase()
+        {
+            SeedData.EnsurePopulated(HttpContext.RequestServices);
 
             return RedirectToAction(nameof(Index));
         }

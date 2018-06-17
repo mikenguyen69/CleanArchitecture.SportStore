@@ -1,4 +1,5 @@
 ﻿using CASportStore.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -45,9 +46,11 @@ namespace CASportStore.Web.Controllers
             return View();
         }
 
+        [Authorize]
         public ViewResult List() =>
             View(_repository.Orders.Where(o => !o.Shipped));
 
+        [Authorize]
         [HttpPost]
         public IActionResult MarkShipped(int orderId)
         {

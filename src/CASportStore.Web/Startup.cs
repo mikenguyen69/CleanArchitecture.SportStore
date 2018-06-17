@@ -153,10 +153,19 @@ namespace CASportStore.Web
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            // Display details of exception during development process. Should be disabled when deploying the app.
-            app.UseDeveloperExceptionPage();
-            // Add simple message  to HTTP responses e.g. 404 
-            app.UseStatusCodePages();
+            if (env.IsDevelopment())
+            {
+                // Display details of exception during development process. Should be disabled when deploying the app.
+                app.UseDeveloperExceptionPage();
+                // Add simple message  to HTTP responses e.g. 404 
+                app.UseStatusCodePages();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
+
+            
             // Enable support for serving static content from wwwroot folder
             app.UseStaticFiles();
             // Use session
@@ -192,8 +201,8 @@ namespace CASportStore.Web
                 routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
 
             });
-            SeedData.EnsurePopulated(app);
-            IdentitySeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
+            //IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
