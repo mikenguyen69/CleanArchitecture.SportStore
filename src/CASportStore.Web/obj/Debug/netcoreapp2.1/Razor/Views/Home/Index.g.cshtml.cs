@@ -75,7 +75,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("\r\n<div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n        <h2>To Do Items (MVC)</h2>\r\n        <ul>\r\n            <li>");
             EndContext();
             BeginContext(180, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "746178df71cd4d019c841991af5bb851", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b76cb5162ff495585fc897036ba4a3d", async() => {
                 BeginContext(239, 23, true);
                 WriteLiteral("Load Sample To Do Items");
                 EndContext();
@@ -101,7 +101,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("</li>\r\n            <li>");
             EndContext();
             BeginContext(289, 76, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "399e4d1d6433409c991716cb14b2735b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad4d695f752b407ca43b336a6d24c95b", async() => {
                 BeginContext(345, 16, true);
                 WriteLiteral("List To Do Items");
                 EndContext();
@@ -127,7 +127,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("</li>\r\n            <li><a href=\"/swagger\">API Documentation (Swagger)</a></li>\r\n        </ul>\r\n        <h2>To Do Items (Razor Pages)</h2>\r\n        <ul>\r\n            <li>");
             EndContext();
             BeginContext(534, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6bf2cfcd1a4f44df8cbd9d9a1a35cfd4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d7a249c85f54940894a9e31242d0bc4", async() => {
                 BeginContext(572, 23, true);
                 WriteLiteral("Load Sample To Do Items");
                 EndContext();
@@ -149,7 +149,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("</li>\r\n            <li>");
             EndContext();
             BeginContext(622, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3a4297eea364ad39d5974d4e5d941a4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2338f46c96234d7a8f030e5ecb95c940", async() => {
                 BeginContext(657, 16, true);
                 WriteLiteral("List To Do Items");
                 EndContext();

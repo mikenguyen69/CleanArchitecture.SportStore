@@ -91,7 +91,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("    <div class=\"text-center m-2\">\r\n        ");
             EndContext();
             BeginContext(179, 144, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "008efe0af1bf46089cbc3491a2361370", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ea37554ac8ac4553bd867846dc04bd3d", async() => {
                 BeginContext(225, 91, true);
                 WriteLiteral("\r\n            <button type=\"submit\" class=\"btn btn-danger\">Seed Database</button>\r\n        ");
                 EndContext();
@@ -173,12 +173,12 @@ else
             WriteLiteral("</td>\r\n                <td class=\"text-center\">\r\n                    ");
             EndContext();
             BeginContext(902, 502, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f5ac438c36c4cdd9f9ef51aa53ea7d2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f79e702ea40e420680e1b14eb5cc8ec6", async() => {
                 BeginContext(942, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();
                 BeginContext(968, 175, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a24eb5f287d248eab8c645f3117f2770", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c538ae4f5c754f729ce921a21289fb05", async() => {
                     BeginContext(1079, 60, true);
                     WriteLiteral("\r\n                            Edit\r\n                        ");
                     EndContext();
@@ -261,7 +261,7 @@ WriteAttributeValue("", 1214, item.Id, 1214, 8, false);
             WriteLiteral("<div class=\"text-center\">\r\n    ");
             EndContext();
             BeginContext(1507, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a85158155d7c4496b7037770c61ef567", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e3e7883a3114ade824a982005605170", async() => {
                 BeginContext(1554, 11, true);
                 WriteLiteral("Add Product");
                 EndContext();

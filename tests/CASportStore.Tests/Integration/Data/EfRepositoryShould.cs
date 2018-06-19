@@ -5,7 +5,6 @@ using Xunit;
 using CASportStore.Infrastructure.Data;
 using CASportStore.Core.Entities;
 using System.Linq;
-using CASportStore.Core.Events;
 using CASportStore.Core.Interfaces;
 using Moq;
 
@@ -13,9 +12,9 @@ namespace CASportStore.Tests.Integration.Data
 {
     public class EfRepositoryAddShould
     {
-        private AppDbContext _dbContext;
+        private ApplicationDbContext _dbContext;
 
-        private static DbContextOptions<AppDbContext> CreateNewContextOptions()
+        private static DbContextOptions<ApplicationDbContext> CreateNewContextOptions()
         {
             // Create a fresh service provider, and therefore a fresh 
             // InMemory database instance.
@@ -25,7 +24,7 @@ namespace CASportStore.Tests.Integration.Data
 
             // Create a new options instance telling the context to use an
             // InMemory database and the new service provider.
-            var builder = new DbContextOptionsBuilder<AppDbContext>();
+            var builder = new DbContextOptionsBuilder<ApplicationDbContext>();
             builder.UseInMemoryDatabase("cleanarchitecture")
                    .UseInternalServiceProvider(serviceProvider);
            
@@ -105,7 +104,7 @@ namespace CASportStore.Tests.Integration.Data
             var options = CreateNewContextOptions();
             var mockDispatcher = new Mock<IDomainEventDispatcher>();
 
-            _dbContext = new AppDbContext(options, mockDispatcher.Object);
+            _dbContext = new ApplicationDbContext(options, mockDispatcher.Object);
             return new EfRepository<ToDoItem>(_dbContext);
         }
     }
