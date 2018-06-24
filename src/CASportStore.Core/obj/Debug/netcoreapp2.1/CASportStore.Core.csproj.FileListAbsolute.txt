@@ -9,7 +9,6 @@ C:\Users\Admin\source\repos\CASportStore\CASportStore.Core\obj\Debug\netcoreapp2
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\bin\Debug\netcoreapp2.1\CASportStore.Core.deps.json
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\bin\Debug\netcoreapp2.1\CASportStore.Core.dll
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\bin\Debug\netcoreapp2.1\CASportStore.Core.pdb
-C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.csprojResolveAssemblyReference.cache
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.AssemblyInfo.cs
@@ -24,3 +23,4 @@ C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASp
 C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.dll
 C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.pdb
 C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.csprojAssemblyReference.cache

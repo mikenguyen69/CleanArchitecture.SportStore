@@ -5862,15 +5862,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj",
       "projectName": "CASportStore.Infrastructure",
-      "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5889,8 +5886,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
-              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
+            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
             }
           }
         }
@@ -5904,27 +5901,27 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Identity": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1.0",
+            "version": "[2.1.0, )",
             "autoReferenced": true
           },
           "StructureMap.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "1.4.0"
-          },
-          "Microsoft.AspNetCore.Identity": {
-            "target": "Package",
-            "version": "2.1.0"
+            "version": "[1.4.0, )"
           }
         },
         "imports": [

@@ -25,6 +25,11 @@ bin/
 Bin/
 obj/
 Obj/
+src/CASportStore.Web/obj/*
+src/CASportStore.Web/bin/*
+src/CASportStore.Test/obj/*
+src/CASportStore.Test/bin/*
+src/CASportStore.Infrastructure/obj/*
 
 # Visual Studio 2015 cache/options directory
 .vs/

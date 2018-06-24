@@ -11852,15 +11852,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
       "projectName": "CASportStore.Web",
-      "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11879,11 +11876,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
-              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
+            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
             },
-            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
-              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
+            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
             }
           }
         }
@@ -11897,24 +11894,24 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "Microsoft.Net.Compilers": {
-            "target": "Package",
-            "version": "2.8.2"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.1.0",
-            "autoReferenced": true
-          },
-          "Swashbuckle.AspNetCore": {
-            "target": "Package",
-            "version": "2.5.0"
-          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1.0",
+            "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.1.0, )",
+            "autoReferenced": true
+          },
+          "Microsoft.Net.Compilers": {
+            "target": "Package",
+            "version": "[2.8.2, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[2.5.0, )"
           }
         },
         "imports": [

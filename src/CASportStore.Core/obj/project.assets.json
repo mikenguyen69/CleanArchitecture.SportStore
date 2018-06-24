@@ -4320,15 +4320,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
       "projectName": "CASportStore.Core",
-      "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4360,16 +4357,16 @@
         "dependencies": {
           "Ardalis.GuardClauses": {
             "target": "Package",
-            "version": "1.2.3"
+            "version": "[1.2.3, )"
           },
           "Microsoft.AspNetCore.Mvc.Core": {
             "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.1.0",
+            "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },

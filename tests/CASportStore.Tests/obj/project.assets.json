@@ -10521,15 +10521,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\_code\\netcore\\CASportStore\\tests\\CASportStore.Tests\\CASportStore.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CASportStore\\tests\\CASportStore.Tests\\CASportStore.Tests.csproj",
       "projectName": "CASportStore.Tests",
-      "projectPath": "C:\\_code\\netcore\\CASportStore\\tests\\CASportStore.Tests\\CASportStore.Tests.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\tests\\CASportStore.Tests\\CASportStore.Tests.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\_code\\netcore\\CASportStore\\tests\\CASportStore.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\tests\\CASportStore.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10548,14 +10545,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
-              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
+            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
             },
-            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj": {
-              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj"
+            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
             },
-            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
-              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
+            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj"
             }
           }
         }
@@ -10569,42 +10566,43 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.InMemory": {
+          "Microsoft.AspNetCore.Hosting": {
             "target": "Package",
-            "version": "2.1.0"
-          },
-          "xunit.runner.visualstudio": {
-            "target": "Package",
-            "version": "2.3.1"
-          },
-          "Moq": {
-            "target": "Package",
-            "version": "4.8.2"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.1.0",
-            "autoReferenced": true
-          },
-          "xunit": {
-            "target": "Package",
-            "version": "2.3.1"
+            "version": "[2.1.0, )"
           },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
-            "version": "2.1.0"
-          },
-          "Microsoft.NET.Test.Sdk": {
-            "target": "Package",
-            "version": "15.7.0"
-          },
-          "Microsoft.AspNetCore.Hosting": {
-            "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
           },
           "Microsoft.AspNetCore.TestHost": {
             "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Microsoft.NET.Test.Sdk": {
+            "target": "Package",
+            "version": "[15.7.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.1.0, )",
+            "autoReferenced": true
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "[4.8.2, )"
+          },
+          "xunit": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          },
+          "xunit.runner.visualstudio": {
+            "target": "Package",
+            "version": "[2.3.1, )"
           }
         },
         "imports": [
