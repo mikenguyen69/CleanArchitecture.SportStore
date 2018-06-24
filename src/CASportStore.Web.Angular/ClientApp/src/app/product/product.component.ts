@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 
 
@@ -20,7 +20,12 @@ export class ProductComponent implements OnInit {
     this.productService.getProducts().subscribe(products => {
       this.products = products;
       console.log(this.products);
-    })
+    });
+    this.productForm = new FormGroup({
+      name: new FormControl(this.productForm.name, [Validators.required]),
+      category: new FormControl(this.productForm.category, [Validators.required]),
+      price: new FormControl(this.productForm.name, [Validators.required, Validators.min(1)]),
+    });
   }
 
   createForm(): any {
