@@ -26,6 +26,10 @@ export class ProductComponent implements OnInit {
       category: new FormControl(this.productForm.category, [Validators.required]),
       price: new FormControl(this.productForm.name, [Validators.required, Validators.min(1)]),
     });
+
+    // To Do
+    // 1. Form validation 
+    // 2. Async action on the button and refreshing the page
   }
 
   createForm(): any {
