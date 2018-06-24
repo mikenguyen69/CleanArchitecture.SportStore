@@ -1,39 +1,55 @@
-<form [formGroup] = "productForm">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input id="name" class="form-control" type="text" formControlName="name">     
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h1>Add new product</h1>
+        <hr />
+      
+        <form [formGroup] = "productForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" class="form-control" type="text" formControlName="name">     
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input id="description" class="form-control" type="text" formControlName="description">     
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input id="category" class="form-control" type="text" formControlName="category">     
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input id="price" class="form-control" type="number" formControlName="price">     
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" (click)="add()">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="description">Description</label>
-    <input id="description" class="form-control" type="text" formControlName="description">     
-  </div>
-  <div class="form-group">
-    <label for="category">Category</label>
-    <input id="category" class="form-control" type="text" formControlName="category">     
-  </div>
-  <div class="form-group">
-    <label for="price">Price</label>
-    <input id="price" class="form-control" type="number" formControlName="price">     
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" (click)="add()">Add</button>
-  </div>
-</form>
 
-<br/>
-<br/>
-<h3>Products</h3>
-<table class="table">
-  <tr>
-    <th>Product</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th>Price</th>
-  </tr>
-  <tr *ngFor="let p of products">
-    <td>{{p.name}}</td>
-    <td>{{p.description}}</td>
-    <td>{{p.category}}</td>
-    <td>{{p.price}}</td>
-  </tr>
-</table>
+  <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h1>Product list</h1>
+                  
+          <table class="table">
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+            <tr *ngFor="let p of products">
+              <td>{{p.name}}</td>
+              <td>{{p.description}}</td>
+              <td>{{p.category}}</td>
+              <td>{{p.price}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+   </div>
+</div>
