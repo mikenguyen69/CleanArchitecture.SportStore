@@ -1,24 +1,15 @@
-import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html'
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
 })
-export class ProductComponent {
-    public products: Product[];
+export class ProductComponent implements OnInit {
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-      http.get<Product[]>(baseUrl + 'api/product').subscribe(result => {
-          this.products = result;
-      }, error => console.error(error));
+  constructor() { }
+
+  ngOnInit() {
   }
-}
 
-interface Product {  
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
 }
