@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/CASportStore.Web.Angular.csproj"
+                "${workspaceFolder}/CASportStore.Web.Angular2.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

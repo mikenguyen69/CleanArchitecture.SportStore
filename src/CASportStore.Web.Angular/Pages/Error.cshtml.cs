@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace CASportStore.Web.Angular.Pages
+namespace CASportStore.Web.Angular2.Pages
 {
     public class ErrorModel : PageModel
     {

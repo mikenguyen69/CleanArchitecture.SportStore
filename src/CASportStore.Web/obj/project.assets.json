@@ -11856,11 +11856,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
+      "projectUniqueName": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
       "projectName": "CASportStore.Web",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
+      "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\CASportStore.Web.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Web\\obj\\",
+      "outputPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11879,11 +11879,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
+            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj": {
+              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Infrastructure\\CASportStore.Infrastructure.csproj"
             },
-            "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
+            "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj": {
+              "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj"
             }
           }
         }

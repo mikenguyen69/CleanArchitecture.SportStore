@@ -24,3 +24,17 @@ C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Infrastructure\obj\Deb
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.AssemblyInfo.cs
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.dll
 C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.pdb
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.deps.json
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.runtimeconfig.json
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.runtimeconfig.dev.json
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.dll
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.pdb
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Core.dll
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\bin\Debug\netcoreapp2.1\CASportStore.Core.pdb
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.csproj.CoreCompileInputs.cache
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.AssemblyInfoInputs.cache
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.AssemblyInfo.cs
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.dll
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.pdb
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.csprojAssemblyReference.cache
+C:\_code\netcore\CASportStore\src\CASportStore.Infrastructure\obj\Debug\netcoreapp2.1\CASportStore.Infrastructure.csproj.CopyComplete

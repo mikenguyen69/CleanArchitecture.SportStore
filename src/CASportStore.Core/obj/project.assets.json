@@ -4324,11 +4324,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
+      "projectUniqueName": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
       "projectName": "CASportStore.Core",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
+      "projectPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\CASportStore.Core.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\CASportStore\\src\\CASportStore.Core\\obj\\",
+      "outputPath": "C:\\_code\\netcore\\CASportStore\\src\\CASportStore.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
