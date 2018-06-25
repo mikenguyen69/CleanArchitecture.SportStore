@@ -16,6 +16,6 @@ namespace CASportStore.Core.Interfaces
         Task<IEnumerable<T>> ListAsync();
         Task<T> AddAsync(T entity);
         Task UpdateAsync(T entity);
-        Task DeleteAsync(T entity);
+        Task DeleteAsync(int id);
     }
 }

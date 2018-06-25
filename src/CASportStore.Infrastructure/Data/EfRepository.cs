@@ -60,8 +60,9 @@ namespace CASportStore.Infrastructure.Data
             return await Task.FromResult(entity);
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task DeleteAsync(int id)
         {
+            T entity = await GetByIdAsync(id);
             _dbContext.Set<T>().Remove(entity);
             _dbContext.SaveChanges();
 

@@ -11,6 +11,6 @@ namespace CASportStore.Core.Interfaces
         Task<ProductDTO> GetByIdAsync(int id);
         Task<IEnumerable<ProductDTO>> GetAsync();
         Task AddAsync(ProductDTO product);
-        Task RemoveAsync(ProductDTO product);
+        Task RemoveAsync(int id);
     }
 }

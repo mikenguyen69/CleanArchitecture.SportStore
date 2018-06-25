@@ -6,6 +6,8 @@ using CASportStore.Core.DTO;
 using System.Threading.Tasks;
 using AutoMapper;
 using CASportStore.Core.Entities;
+using CASportStore.Core.Exceptions;
+using System.Linq;
 
 namespace CASportStore.Infrastructure.Services
 {
@@ -20,24 +22,38 @@ namespace CASportStore.Infrastructure.Services
             this.mapper = mapper;
         }
 
-        public Task AddAsync(ProductDTO product)
+        public async Task AddAsync(ProductDTO productDTO)
         {
-            throw new NotImplementedException();
+            var product = await repository.GetByIdAsync(productDTO.Id);
+
+            if (product != null)
+            {
+                throw new CAException(StatusCode.PRODUCT_EXIST, $"Product {productDTO.Description} already exists.");
+            }
+
+            await repository.AddAsync(product);
         }
 
-        public Task<IEnumerable<ProductDTO>> GetAsync()
+        public async Task<IEnumerable<ProductDTO>> GetAsync()
         {
-            throw new NotImplementedException();
+            var products = await repository.ListAsync();
+
+            return mapper.Map<IEnumerable<Product>, IEnumerable<ProductDTO>>(products);
         }
 
-        public Task<ProductDTO> GetByIdAsync(int id)
+        public async Task<ProductDTO> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var product = await repository.GetByIdAsync(id);
+
+            if (product == null)
+            {
+                throw new CAException(StatusCode.PRODUCT_NOT_FOUND, $"Product with Id={id} not found.");
+            }
+
+            return mapper.Map<Product, ProductDTO>(product);
         }
 
-        public Task RemoveAsync(ProductDTO product)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task RemoveAsync(int id) =>
+            await repository.DeleteAsync(id);
     }
 }
