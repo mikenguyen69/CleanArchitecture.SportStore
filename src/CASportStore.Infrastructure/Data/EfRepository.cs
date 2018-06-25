@@ -3,6 +3,7 @@ using System.Linq;
 using CASportStore.Core.Interfaces;
 using CASportStore.Core.SharedKernel;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace CASportStore.Infrastructure.Data
 {
@@ -44,5 +45,35 @@ namespace CASportStore.Infrastructure.Data
             _dbContext.Entry(entity).State = EntityState.Modified;
             _dbContext.SaveChanges();
         }
+
+        public async Task<T> GetByIdAsync(int id) =>
+            await Task.FromResult(_dbContext.Set<T>().SingleOrDefault(e => e.Id == id));
+
+        public async Task<IEnumerable<T>> ListAsync() =>
+            await Task.FromResult(_dbContext.Set<T>().ToList());
+
+        public async Task<T> AddAsync(T entity)
+        {
+            _dbContext.Set<T>().Add(entity);
+            _dbContext.SaveChanges();
+
+            return await Task.FromResult(entity);
+        }
+
+        public async Task DeleteAsync(T entity)
+        {
+            _dbContext.Set<T>().Remove(entity);
+            _dbContext.SaveChanges();
+
+            await Task.CompletedTask;
+        }
+
+        public async Task UpdateAsync(T entity)
+        {
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            _dbContext.SaveChanges();
+
+            await Task.CompletedTask;
+        }        
     }
 }

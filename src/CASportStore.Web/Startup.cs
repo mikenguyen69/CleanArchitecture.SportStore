@@ -172,13 +172,13 @@ namespace CASportStore.Web
                     _.ConnectImplementationsToTypesClosing(typeof(IHandle<>));
                 });
 
-                    // TODO: Add Registry Classes to eliminate reference to Infrastructure
+                // TODO: Add Registry Classes to eliminate reference to Infrastructure
 
-                    // TODO: Move to Infrastucture Registry
-                    config.For(typeof(IRepository<>)).Add(typeof(EfRepository<>));
+                // TODO: Move to Infrastucture Registry
+                config.For(typeof(IRepository<>)).Add(typeof(EfRepository<>));
 
-                    //Populate the container using the service collection
-                    config.Populate(services);
+                //Populate the container using the service collection
+                config.Populate(services);
             });
 
             return container.GetInstance<IServiceProvider>();

@@ -9,6 +9,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using AutoMapper;
 using CASportStore.Core.Mappers;
+using CASportStore.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using StructureMap;
+using CASportStore.Core.Interfaces;
+using CASportStore.Core.SharedKernel;
 
 namespace CASportStore.Api
 {
@@ -24,9 +29,29 @@ namespace CASportStore.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"])
+            );
             services.AddMvc();
             services.AddSingleton<IMapper>(_ => AutoMapperConfig.GetMapper());
 
+            var container = new Container();
+            container.Configure(config =>
+            {
+                config.Scan(_ =>
+                {
+                    _.AssemblyContainingType(typeof(Startup)); // Web
+                    _.AssemblyContainingType(typeof(BaseEntity)); // Core
+                    _.Assembly("CASportStore.Infrastructure"); // Infrastructure
+                    _.WithDefaultConventions();
+                    _.ConnectImplementationsToTypesClosing(typeof(IHandle<>));
+                });
+
+                config.For(typeof(IRepository<>)).Add(typeof(EfRepository<>));
+
+                //Populate the container using the service collection
+                config.Populate(services);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
