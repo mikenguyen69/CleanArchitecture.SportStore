@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CASportStore.Web", "src\CAS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CASportStore.Tests", "tests\CASportStore.Tests\CASportStore.Tests.csproj", "{573A544A-168D-43FB-B0B9-57C9F6E58034}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASportStore.Web.Angular", "src\CASportStore.Web.Angular\CASportStore.Web.Angular.csproj", "{46B1070C-8A91-4178-9F75-DF4389BBCE92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CASportStore.Web.Angular", "src\CASportStore.Web.Angular\CASportStore.Web.Angular.csproj", "{46B1070C-8A91-4178-9F75-DF4389BBCE92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASportStore.Api", "CASportStore.Api\CASportStore.Api.csproj", "{B0F9819A-502E-4A2D-B7F2-D44BE6A6C076}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{46B1070C-8A91-4178-9F75-DF4389BBCE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46B1070C-8A91-4178-9F75-DF4389BBCE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46B1070C-8A91-4178-9F75-DF4389BBCE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F9819A-502E-4A2D-B7F2-D44BE6A6C076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F9819A-502E-4A2D-B7F2-D44BE6A6C076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F9819A-502E-4A2D-B7F2-D44BE6A6C076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F9819A-502E-4A2D-B7F2-D44BE6A6C076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

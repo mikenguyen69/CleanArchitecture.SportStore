@@ -42,5 +42,4 @@ C:\_code\netcore\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\C
 C:\_code\netcore\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.csproj.CopyComplete
 C:\_code\netcore\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.dll
 C:\_code\netcore\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.pdb
-C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.csprojAssemblyReference.cache
-C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.csproj.CopyComplete
+C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.csprojResolveAssemblyReference.cache

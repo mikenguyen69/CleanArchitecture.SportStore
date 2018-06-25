@@ -95,4 +95,4 @@ C:\_code\netcore\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASpo
 C:\_code\netcore\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csproj.CopyComplete
 C:\_code\netcore\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.dll
 C:\_code\netcore\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.pdb
-C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Web\obj\Debug\netcoreapp2.1\CASportStore.Web.csprojResolveAssemblyReference.cache
