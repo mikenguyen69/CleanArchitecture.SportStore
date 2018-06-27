@@ -11,13 +11,32 @@ namespace CASportStore.Api.Controllers
     [Route("api/products")]
     public class ProductController : Controller
     {
-        private readonly IRepository<Product> repository;
+        private readonly IProductService service;
 
-        public ProductController(IRepository<Product> repository)
+        public ProductController(IProductService service)
         {
-            this.repository = repository;
+            this.service = service;
         }
 
-        
+        [HttpGet("")]
+        public async Task<IActionResult> Get()
+        {
+            var products = await service.GetAsync();
+
+            return Json(products);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var product = await service.GetByIdAsync(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return Json(product);
+        }
     }
 }

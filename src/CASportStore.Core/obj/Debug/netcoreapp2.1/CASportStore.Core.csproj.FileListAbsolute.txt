@@ -23,3 +23,4 @@ C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASp
 C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.dll
 C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.pdb
 C:\_code\netcore\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\CASportStore\src\CASportStore.Core\obj\Debug\netcoreapp2.1\CASportStore.Core.csprojResolveAssemblyReference.cache

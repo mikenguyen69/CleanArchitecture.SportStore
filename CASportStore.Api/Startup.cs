@@ -61,14 +61,15 @@ namespace CASportStore.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseStaticFiles();
+
             app.UseMvc();
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
         }
     }
 }
