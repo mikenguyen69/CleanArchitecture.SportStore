@@ -14,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using StructureMap;
 using CASportStore.Core.Interfaces;
 using CASportStore.Core.SharedKernel;
+using CASportStore.Infrastructure.Services;
+using CASportStore.Core.Entities;
 
 namespace CASportStore.Api
 {
@@ -34,7 +36,7 @@ namespace CASportStore.Api
             );
             services.AddMvc();
             services.AddSingleton<IMapper>(_ => AutoMapperConfig.GetMapper());
-
+           
             var container = new Container();
             container.Configure(config =>
             {
@@ -48,10 +50,14 @@ namespace CASportStore.Api
                 });
 
                 config.For(typeof(IRepository<>)).Add(typeof(EfRepository<>));
-
+                
                 //Populate the container using the service collection
                 config.Populate(services);
             });
+
+            services.AddScoped<IRepository<Product>, EfRepository<Product>>();
+            services.AddScoped<IProductService, ProductService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
