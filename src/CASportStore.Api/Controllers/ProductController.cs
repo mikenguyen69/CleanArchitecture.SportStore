@@ -1,4 +1,5 @@
-﻿using CASportStore.Core.Entities;
+﻿using CASportStore.Core.DTO;
+using CASportStore.Core.Entities;
 using CASportStore.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -37,6 +38,22 @@ namespace CASportStore.Api.Controllers
             }
 
             return Json(product);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] ProductDTO product)
+        {
+            await service.AddAsync(product);
+
+            return Created($"/api/products/{product.Id}", product);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await service.RemoveAsync(id);
+
+            return NoContent();
         }
     }
 }

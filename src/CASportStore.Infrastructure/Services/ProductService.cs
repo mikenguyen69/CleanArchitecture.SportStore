@@ -31,7 +31,11 @@ namespace CASportStore.Infrastructure.Services
                 throw new CAException(StatusCode.PRODUCT_EXIST, $"Product {productDTO.Description} already exists.");
             }
 
-            await repository.AddAsync(product);
+            product = mapper.Map<ProductDTO, Product>(productDTO);
+
+            product = await repository.AddAsync(product);
+
+            productDTO.Id = product.Id;
         }
 
         public async Task<IEnumerable<ProductDTO>> GetAsync()

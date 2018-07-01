@@ -70,7 +70,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(52, 181, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4fa6e591c36040009ef563373b0060aa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bac101950dff4831904ea98fea42ce0d", async() => {
                 BeginContext(58, 168, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <link rel=\"stylesheet\" href=\"∼/lib/bootstrap/dist/css/bootstrap.min.css\" />\r\n    <title>Error</title>\r\n");
                 EndContext();
@@ -90,7 +90,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(235, 139, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "547094b4c48546c8ae3addd5b96c5d9d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3cf394426e284fd9ae29e07304c9a2e8", async() => {
                 BeginContext(241, 126, true);
                 WriteLiteral("\r\n    <h2 class=\"text-danger\">Error.</h2>\r\n    <h3 class=\"text-danger\">An error occurred while processing your request.</h3>\r\n");
                 EndContext();

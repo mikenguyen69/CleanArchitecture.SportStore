@@ -31,11 +31,9 @@ C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netc
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Tests.runtimeconfig.dev.json
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Tests.dll
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Tests.pdb
-C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Api.dll
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Core.dll
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.dll
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Web.dll
-C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Api.pdb
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Core.pdb
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Infrastructure.pdb
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Web.pdb

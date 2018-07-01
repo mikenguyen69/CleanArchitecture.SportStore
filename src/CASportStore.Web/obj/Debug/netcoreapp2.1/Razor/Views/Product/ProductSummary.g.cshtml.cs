@@ -90,12 +90,12 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("</small>\r\n            </span>\r\n        </h4>\r\n    </div>\r\n    \r\n    ");
             EndContext();
             BeginContext(334, 536, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99e2a0e5da804d3db00837d8d88345f2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3e2be06a1934aa7af4c09517785d3fa", async() => {
                 BeginContext(414, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(424, 53, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9471f8d458fb48f3b933120f9f7b5391", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2a8ab308a16b4c35bd5b984bcb5fa73f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();

@@ -68,7 +68,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(30, 132, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5302f3ff97e42558880e152e3a4f064", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3001747b5705482fa7b7a001ec40f108", async() => {
                 BeginContext(146, 12, true);
                 WriteLiteral("\r\n    Home\r\n");
                 EndContext();
@@ -107,7 +107,7 @@ using CASportStore.Web.Infrastructure;
             WriteLiteral("    ");
             EndContext();
             BeginContext(209, 269, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e32fdfd5bf094799ad3c0383d6950851", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5301c89e54f457e907406c20434bb93", async() => {
                 BeginContext(449, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
