@@ -22,7 +22,7 @@ namespace CASportStore.Tests.Integration.Api.Controllers
         {
             _server = new TestServer(new WebHostBuilder()
                 .UseStartup<Startup>());
-            _client = _server.CreateClient();                
+            _client = _server.CreateClient();
         }
 
         [Fact]
