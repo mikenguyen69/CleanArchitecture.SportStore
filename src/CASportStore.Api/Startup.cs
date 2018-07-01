@@ -32,7 +32,10 @@ namespace CASportStore.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"])
+                options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"] 
+                ??
+                // To-do: testing doesn't seem getting the correct Configuration
+                "Server=(localdb)\\MSSQLLocalDB;Database=SportsStore;Trusted_Connection=True;MultipleActiveResultSets=true")
             );
             services.AddMvc();          
             services.AddSingleton<IMapper>(_ => AutoMapperConfig.GetMapper());
@@ -70,13 +73,7 @@ namespace CASportStore.Api
             }
             
             app.UseStaticFiles();
-
             app.UseMvc();
-
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
         }
     }
 }

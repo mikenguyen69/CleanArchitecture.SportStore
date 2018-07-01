@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "5854145f9b72351a2a4106282e3275ac36b12449"
+    "signature": "a32c396a6691c2fc78c152f97901512af47048e4"
   },
   "compilationOptions": {
     "defines": [
@@ -28,6 +28,8 @@
           "CASportStore.Core": "1.0.0",
           "CASportStore.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.0",
+          "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.0",
           "Microsoft.NETCore.App": "2.1.0"
         },
         "runtime": {
@@ -78,6 +80,30 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Diagnostics/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "2.1.0",
+          "Microsoft.AspNetCore.WebUtilities": "2.1.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Options": "2.1.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.0",
+          "System.Diagnostics.StackTrace": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Metadata": "1.6.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Diagnostics.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.20622"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Diagnostics.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.1.0": {
@@ -332,7 +358,7 @@
       },
       "Microsoft.AspNetCore/2.1.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Diagnostics": "2.1.0",
+          "Microsoft.AspNetCore.Diagnostics": "1.0.0",
           "Microsoft.AspNetCore.HostFiltering": "2.1.0",
           "Microsoft.AspNetCore.Hosting": "2.1.0",
           "Microsoft.AspNetCore.Routing": "2.1.0",
@@ -394,7 +420,7 @@
           "Microsoft.AspNetCore.DataProtection": "2.1.0",
           "Microsoft.AspNetCore.DataProtection.Abstractions": "2.1.0",
           "Microsoft.AspNetCore.DataProtection.Extensions": "2.1.0",
-          "Microsoft.AspNetCore.Diagnostics": "2.1.0",
+          "Microsoft.AspNetCore.Diagnostics": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.1.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "2.1.0",
           "Microsoft.AspNetCore.HostFiltering": "2.1.0",
@@ -738,23 +764,6 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Extensions.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.AspNetCore.Diagnostics/2.1.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.1.0",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.0",
-          "Microsoft.AspNetCore.Http.Extensions": "2.1.0",
-          "Microsoft.AspNetCore.WebUtilities": "2.1.0",
-          "Microsoft.Extensions.FileProviders.Physical": "2.1.0",
-          "Microsoft.Extensions.Logging.Abstractions": "2.1.0",
-          "Microsoft.Extensions.Options": "2.1.0",
-          "System.Diagnostics.DiagnosticSource": "4.5.0",
-          "System.Reflection.Metadata": "1.6.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.dll": {}
         },
         "compileOnly": true
       },
@@ -3284,6 +3293,13 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/4.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.4.0.1.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Diagnostics/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nGmsbmax1PsMyOzeE+4UyA7dZZ4SlRa5j4eMbt1HArvUaec3Z7ldb7fASyCrC/tlpfKf9Jeruv1qy+yGyjUeQw==",
+      "path": "microsoft.aspnetcore.diagnostics/1.0.0",
+      "hashPath": "microsoft.aspnetcore.diagnostics.1.0.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "type": "package",
       "serviceable": true,
@@ -3552,13 +3568,6 @@
       "sha512": "sha512-LGO9un3bxxBvLj/73kIZ+PgacTQxEeRPvYUAWKIKG8DGHfW/12rqzF+1A86kwIjfZlMt2rp09T8XarF0JdYGyw==",
       "path": "microsoft.aspnetcore.dataprotection.extensions/2.1.0",
       "hashPath": "microsoft.aspnetcore.dataprotection.extensions.2.1.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Diagnostics/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-kHY3M8RoLxYK5yfPxRN6/fYnvcYN0rBP3LoC8OVoPh39fSjrLpuSJVY75BP1BM2/ULZxXjnZTtG1vyEz25MOQQ==",
-      "path": "microsoft.aspnetcore.diagnostics/2.1.0",
-      "hashPath": "microsoft.aspnetcore.diagnostics.2.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Diagnostics.Abstractions/2.1.0": {
       "type": "package",

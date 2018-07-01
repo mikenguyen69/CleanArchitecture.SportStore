@@ -145,11 +145,12 @@ namespace CASportStore.Tests.Integration.Web.Controllers
 
             // Arrange - create the mock repository
             Mock<IRepository<Product>> mock = new Mock<IRepository<Product>>();
-                    mock.Setup(m => m.List()).Returns(new Product[] {
-                new Product {Id = 1, Name = "P1"},
-                prod,
-                new Product {Id = 3, Name = "P3"},
-            }.ToList());
+            //mock.Setup(m => m.List()).Returns(new Product[] {
+            //    new Product {Id = 1, Name = "P1"},
+            //    prod,
+            //    new Product {Id = 3, Name = "P3"},
+            //}.ToList());
+            mock.Setup(m => m.GetById(2)).Returns(prod);
 
             // Arrange - create the controller
             AdminController target = new AdminController(mock.Object);
@@ -159,7 +160,9 @@ namespace CASportStore.Tests.Integration.Web.Controllers
 
             // Assert - ensure that the repository delete method was
             // called with the correct Product
-            mock.Verify(m => m.Delete(prod));
+            mock.Verify(x => x.GetById(prod.Id));
+            mock.Verify(x => x.Delete(prod));
+            
         }
     }
 }

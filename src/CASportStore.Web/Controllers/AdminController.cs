@@ -50,7 +50,8 @@ namespace CASportStore.Web.Controllers
             {
                 _repository.Delete(deletedProduct);
 
-                TempData["message"] = $"{deletedProduct.Name} was deleted.";
+                if (TempData != null)
+                    TempData["message"] = $"{deletedProduct.Name} was deleted.";
             }
 
             return RedirectToAction(nameof(Index));
