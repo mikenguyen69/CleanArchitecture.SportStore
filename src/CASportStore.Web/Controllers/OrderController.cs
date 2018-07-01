@@ -1,13 +1,9 @@
 ﻿using CASportStore.Core.Entities;
 using CASportStore.Core.Interfaces;
 using CASportStore.Core.Services;
-using CASportStore.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CASportStore.Web.Controllers
 {

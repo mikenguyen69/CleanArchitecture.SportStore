@@ -62,7 +62,7 @@ namespace CASportStore.Tests.EndToEnd.Api.Controllers
             response.Headers.Location.ToString().Should().BeEquivalentTo($"/api/products/{product.Id}");
 
             // Continue with deletion test here 
-            delete_a_product_should_succeed();
+            await delete_a_product_should_succeed();
 
         }
        
