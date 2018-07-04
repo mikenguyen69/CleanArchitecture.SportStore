@@ -48,6 +48,29 @@ namespace CASportStore.Tests.EndToEnd.Api.Controllers
         }
 
         [Fact]
+        public async Task create_new_product_then_get_it()
+        {
+            var response = await _client.PostAsync($"/api/products", GetPayLoad(product));
+            response.EnsureSuccessStatusCode();
+
+            response.StatusCode.Should().BeEquivalentTo(HttpStatusCode.Created);
+
+            // get the product
+            var result = await response.Content.ReadAsStringAsync();
+            product = JsonConvert.DeserializeObject<ProductDTO>(result);
+
+            // retrieve it
+            response = await _client.GetAsync($"/api/products/{product.Id}");
+            result = await response.Content.ReadAsStringAsync();
+            var returnedProduct = JsonConvert.DeserializeObject<ProductDTO>(result);
+
+            product.Should().Equals(returnedProduct);
+
+            // delete it
+            await delete_a_product_should_succeed();
+        }
+
+        [Fact]
         public async Task create_new_product_then_delete_it_should_succeed()
         {
             var response = await _client.PostAsync($"/api/products", GetPayLoad(product));
