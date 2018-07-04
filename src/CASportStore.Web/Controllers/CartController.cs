@@ -1,5 +1,4 @@
-﻿using CASportStore.Web.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using CASportStore.Web.Models.ViewModels;
 using CASportStore.Core.Interfaces;
