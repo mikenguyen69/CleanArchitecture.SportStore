@@ -15,6 +15,8 @@ namespace CASportStore.Core.Mappers
             {
                 cfg.CreateMap<Product, ProductDTO>();
                 cfg.CreateMap<ProductDTO, Product>();
+                cfg.CreateMap<ToDoItem, ToDoItemDTO>();
+                cfg.CreateMap<ToDoItemDTO, ToDoItem>();
             });
 
             return config.CreateMapper();
