@@ -43,3 +43,5 @@ C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netc
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.AssemblyInfo.cs
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.dll
 C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\obj\Debug\netcoreapp2.1\CASportStore.Tests.pdb
+C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Api.dll
+C:\Users\Admin\source\repos\CASportStore\tests\CASportStore.Tests\bin\Debug\netcoreapp2.1\CASportStore.Api.pdb
